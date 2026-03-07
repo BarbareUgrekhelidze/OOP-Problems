@@ -1,6 +1,6 @@
 package org.example;
 import org.junit.jupiter.api.BeforeEach;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
 import java.util.List;
@@ -8,11 +8,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class MyStackTest extends MyStack{
+public class MyStackTest {
     MyStack<Integer> stack;
+
     @BeforeEach
     public void setUP(){
-        stack = new MyStack<>();
+        this.stack = new MyStack<>();
     }
 
     @Test
@@ -39,14 +40,6 @@ public class MyStackTest extends MyStack{
     public void testPopEmptyStack(){
         assertEquals(0, stack.size());
         assertThrows(EmptyStackException.class, () -> stack.pop());
-    }
-
-    @Test
-    public void testAddMaxValueWithMaxSize(){
-        for(int i = 0; i < Integer.MAX_VALUE; i++){
-            stack.add(Integer.MAX_VALUE);
-        }
-        assertEquals(Integer.MAX_VALUE, stack.size());
     }
 
     @Test

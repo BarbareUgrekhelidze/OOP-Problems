@@ -1,14 +1,11 @@
 package org.example;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-
+import java.util.*;
 
 public class MyStack <T> {
     private List<T> stack;
 
     public MyStack(){
-
+        stack = new ArrayList();
     }
 
     public void add(T elem){
@@ -17,9 +14,13 @@ public class MyStack <T> {
 
     public T pop(){
         if (stack.size() == 0){
-            throw new IllegalArgumentException("No element to pop");
+            throw new EmptyStackException();
         }
-        return stack.get(stack.size()-1);
+
+        T result = stack.get(stack.size()-1);
+        stack.remove(stack.size()-1);
+
+        return result;
     }
 
     public void addAll(Collection<T> elems){

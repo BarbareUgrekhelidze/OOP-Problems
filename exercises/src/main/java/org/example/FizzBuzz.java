@@ -15,7 +15,6 @@ public class FizzBuzz {
         }else{
             return String.valueOf(n);
         }
-
     }
 
     private boolean containsDigit(int n, int digit) {

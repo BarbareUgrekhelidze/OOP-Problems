@@ -33,7 +33,6 @@ public class GenericPairTest {
     @Test
     public void testToString(){
         GenericPair<Character, String> pair1 = new GenericPair('a', "b");
-        System.out.println(pair1);
     }
 
 }

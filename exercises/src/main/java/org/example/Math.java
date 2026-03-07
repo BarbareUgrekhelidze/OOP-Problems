@@ -7,7 +7,7 @@ public class Math {
 
     public static int abs(int n){
         if (n == Integer.MIN_VALUE){
-
+            return Integer.MAX_VALUE;
         }
         return n < 0 ? -n : n;
     }
