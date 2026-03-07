@@ -1,7 +1,5 @@
 package org.example;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class FizzBuzz {
     public FizzBuzz(){}
 
@@ -20,6 +18,5 @@ public class FizzBuzz {
     private boolean containsDigit(int n, int digit) {
         return String.valueOf(n).contains(String.valueOf(digit));
     }
-
 
 }
